@@ -17,6 +17,8 @@ requires:
   Digest::MD5: 0
   File::Slurp: 0
   File::chdir: 0
+  Log::Any: 0
+  Log::Any::App: 0
   Sub::Spec: 0.14
   Sub::Spec::CmdLine: 0
   Test::More: 0.96
@@ -24,4 +26,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/App-UniqFile/
   repository: http://github.com/sharyanto/perl-App-UniqFile
-version: 0.01
+version: 0.02

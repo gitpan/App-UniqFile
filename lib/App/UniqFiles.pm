@@ -11,7 +11,7 @@ require Exporter;
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw(uniq_files);
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 our %SPEC;
 
@@ -87,7 +87,7 @@ sub uniq_files {
         my @st = stat $f;
         unless (@st) {
             $log->error("Can't stat file `$f`: $!, skipped");
-            next FILE;
+            next;
         }
         $size_counts{$st[7]}++;
         $file_sizes{$f} = $st[7];
@@ -102,7 +102,7 @@ sub uniq_files {
         my $fh;
         unless (open $fh, "<", $f) {
             $log->error("Can't open file `$f`: $!, skipped");
-            next FILE;
+            next;
         }
         my $ctx = Digest::MD5->new;
         $ctx->addfile($fh);
@@ -148,7 +148,7 @@ App::UniqFiles - Report or omit duplicate file contents
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

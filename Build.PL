@@ -17,7 +17,7 @@ my %module_build_args = (
     'Steven Haryanto <stevenharyanto@gmail.com>'
   ],
   'dist_name' => 'App-UniqFile',
-  'dist_version' => '0.01',
+  'dist_version' => '0.02',
   'license' => 'perl',
   'module_name' => 'App::UniqFile',
   'recommends' => {},
@@ -26,6 +26,8 @@ my %module_build_args = (
     'Digest::MD5' => '0',
     'File::Slurp' => '0',
     'File::chdir' => '0',
+    'Log::Any' => '0',
+    'Log::Any::App' => '0',
     'Sub::Spec' => '0.14',
     'Sub::Spec::CmdLine' => '0',
     'Test::More' => '0.96',
